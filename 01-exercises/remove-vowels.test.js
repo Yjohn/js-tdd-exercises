@@ -2,7 +2,7 @@
  * This function is supposed to remove vowels from a phrase
  * Add tests to prove that it functions properly with these examples at least:
  *         removeVowels("goodbye")  // --> "gdby"
- *         removeVowels("node girls")  // --> "nd grls"
+ *         removeVowels("nodegirls")  // --> "nd grls"
  *         removeVowels('how are you today?') // --> "hw r y tdy?"
  * Consider EDGE cases (how the function behaves if you pass undefined, or a number etc..)
  * Then add a test that contains CAPITAL vowel letters (hEllo for example)
@@ -13,7 +13,7 @@
  */
 
 function removeVowels(phrase) {
-    return phrase.replace(/[aeiou]/g, '');
+    return phrase.replace(/[aeiouAEIOU]/g, '');
 }
 
 /*
@@ -23,3 +23,27 @@ test('removeVowels should remove the Os', function(){
     expect(result).toBe('Tm');
 });
 */
+test('removeVowels should remove the Os', function(){
+    var result = removeVowels('Tom');
+    expect(result).toBe('Tm');
+});
+
+test('removeVowels should remove the Oand e', function(){
+    var result = removeVowels("goodbye");
+    expect(result).toBe('gdby');
+});
+
+test('removeVowels should remove the O,i and e', function(){
+    var result = removeVowels("nodegirls");
+    expect(result).toBe('ndgrls');
+});
+
+test('removeVowels should remove the a, u, O and e', function(){
+    var result = removeVowels('how are you today?');
+    expect(result).toBe('hw r y tdy?');
+});
+
+test('removeVowels should remove the a, u, O and e in upper and lower case', function(){
+    var result = removeVowels('hOw are yOu todAy?');
+    expect(result).toBe('hw r y tdy?');
+});

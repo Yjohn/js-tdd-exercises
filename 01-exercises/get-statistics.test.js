@@ -1,17 +1,19 @@
-function findAlive(writers) {
-  var result=[];
+function getStatistics(writers, age) {
+  var result={alive: 0, dead: 0};
+
   for (i=0;i<writers.length;i++){
     if (writers[i].alive===true){
-      result.push(writers[i]); 
+      result.alive+=1;
+    } else {
+        result.dead+=1;
     }
+    
   }
   return result;
-  // ToDo: Implement this function to make all the tests below pass
-  // DO NOT Change the tests (you can add more tests though)
 }
 
 
-test('function should retrieve only alive writers', function() {
+test('function should retrieve a number of alive writers and dead', function() {
   var persons = [
     {
       firstName: "Virginia",
@@ -43,21 +45,11 @@ test('function should retrieve only alive writers', function() {
     },
   ];
 
-  var result = findAlive(persons);
+  var result = getStatistics(persons);
 
-  expect(result).toEqual([{
-      firstName: "Zadie",
-      lastName: "Smith",
-      occupation: "writer",
-      age: 41,
-      alive: true
-    },
-    {
-      firstName: "bell",
-      lastName: "hooks",
-      occupation: "writer",
-      age: 64,
-      alive: true
-    }])
+  expect(result).toEqual({
+alive: 2,
+dead: 2
+})
 });
 test("string", function(){})
