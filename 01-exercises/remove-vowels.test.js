@@ -23,27 +23,27 @@ test('removeVowels should remove the Os', function(){
     expect(result).toBe('Tm');
 });
 */
-test('removeVowels should remove the Os', function(){
+test('removeVowels should remove the Os', function () {
     var result = removeVowels('Tom');
     expect(result).toBe('Tm');
 });
 
-test('removeVowels should remove the Oand e', function(){
+test('removeVowels should remove the Oand e', function () {
     var result = removeVowels("goodbye");
     expect(result).toBe('gdby');
 });
 
-test('removeVowels should remove the O,i and e', function(){
+test('removeVowels should remove the O,i and e', function () {
     var result = removeVowels("nodegirls");
     expect(result).toBe('ndgrls');
 });
 
-test('removeVowels should remove the a, u, O and e', function(){
+test('removeVowels should remove the a, u, O and e', function () {
     var result = removeVowels('how are you today?');
     expect(result).toBe('hw r y tdy?');
 });
 
-test('removeVowels should remove the a, u, O and e in upper and lower case', function(){
+test('removeVowels should remove the a, u, O and e in upper and lower case', function () {
     var result = removeVowels('hOw are yOu todAy?');
     expect(result).toBe('hw r y tdy?');
 });

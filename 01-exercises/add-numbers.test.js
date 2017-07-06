@@ -18,7 +18,7 @@ function add() {
     // read more here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
     var args = Array.prototype.slice.call(arguments);
     var result = 0;
-    for(var i = 0; i< args.length; i++){
+    for (var i = 0; i < args.length; i++) {
         result += parseInt(args[i]);
     }
     return result;
@@ -31,13 +31,13 @@ test('add should add two numbers', function(){
     expect(result).toEqual(3);
 });
 */
-test('add numbers', function(){
+test('add numbers', function () {
     // var result = add(2, 1, 3);
     // expect(result).toEqual(6);
-    expect(add(4,2,4)).toEqual(10);
+    expect(add(4, 2, 4)).toEqual(10);
 });
 
 
-test("string", function(){})
+test("string", function () { })
 
 

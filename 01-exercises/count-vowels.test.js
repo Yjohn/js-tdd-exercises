@@ -7,18 +7,18 @@ function isVowel(letter) {
     }
     return false;
 }
-function countVowelsInString(phrase){
-    var count=0;
-    for (var i=0;i<phrase.length;i++){
-        if(isVowel(phrase[i])){
+function countVowelsInString(phrase) {
+    var count = 0;
+    for (var i = 0; i < phrase.length; i++) {
+        if (isVowel(phrase[i])) {
             count++;
         }
     }
     return count;
 }
 
-test('count the vowels in the string',function(){
-    var school=('code your future');
+test('count the vowels in the string', function () {
+    var school = ('code your future');
     expect(countVowelsInString(school)).toBe(7);
 })
 // function countVowels(phrase){

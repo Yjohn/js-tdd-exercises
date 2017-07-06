@@ -16,23 +16,23 @@ function multiply() {
     // read more here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
     var args = Array.prototype.slice.call(arguments);
     var result = 1;
-    for(var i = 0; i< args.length; i++){
-        result =result * parseInt(args[i]);
+    for (var i = 0; i < args.length; i++) {
+        result = result * parseInt(args[i]);
     }
     return result;
 }
 
-test('multiply numbers', function(){
+test('multiply numbers', function () {
     // var result = add(2, 1, 3);
     // expect(result).toEqual(6);
-    expect(multiply(4,2)).toEqual(8);
+    expect(multiply(4, 2)).toEqual(8);
 });
 
 
-test('multiply numbers', function(){
-    expect(multiply(12,12)).toEqual(144);
+test('multiply numbers', function () {
+    expect(multiply(12, 12)).toEqual(144);
 });
 
-test('multiply numbers', function(){
-    expect(multiply(2,2,10)).toEqual(40);
+test('multiply numbers', function () {
+    expect(multiply(2, 2, 10)).toEqual(40);
 });

@@ -1,8 +1,8 @@
 function findAlive(writers) {
-  var result=[];
-  for (i=0;i<writers.length;i++){
-    if (writers[i].alive===true){
-      result.push(writers[i]); 
+  var result = [];
+  for (i = 0; i < writers.length; i++) {
+    if (writers[i].alive === true) {
+      result.push(writers[i]);
     }
   }
   return result;
@@ -11,7 +11,7 @@ function findAlive(writers) {
 }
 
 
-test('function should retrieve only alive writers', function() {
+test('function should retrieve only alive writers', function () {
   var persons = [
     {
       firstName: "Virginia",
@@ -46,18 +46,18 @@ test('function should retrieve only alive writers', function() {
   var result = findAlive(persons);
 
   expect(result).toEqual([{
-      firstName: "Zadie",
-      lastName: "Smith",
-      occupation: "writer",
-      age: 41,
-      alive: true
-    },
-    {
-      firstName: "bell",
-      lastName: "hooks",
-      occupation: "writer",
-      age: 64,
-      alive: true
-    }])
+    firstName: "Zadie",
+    lastName: "Smith",
+    occupation: "writer",
+    age: 41,
+    alive: true
+  },
+  {
+    firstName: "bell",
+    lastName: "hooks",
+    occupation: "writer",
+    age: 64,
+    alive: true
+  }])
 });
-test("string", function(){})
+test("string", function () { })

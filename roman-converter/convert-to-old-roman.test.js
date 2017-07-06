@@ -4,7 +4,7 @@ function convertToOldRoman(number) {
 }
 
 /* write the tests */
-test('convertToOldRoman should return I for 1', function() {
+test('convertToOldRoman should return I for 1', function () {
     var result = convertToOldRoman(1);
     expect(result).toBe('I');
 });

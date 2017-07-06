@@ -1,19 +1,19 @@
 function getStatistics(writers, age) {
-  var result={alive: 0, dead: 0};
+  var result = { alive: 0, dead: 0 };
 
-  for (i=0;i<writers.length;i++){
-    if (writers[i].alive===true){
-      result.alive+=1;
+  for (i = 0; i < writers.length; i++) {
+    if (writers[i].alive === true) {
+      result.alive += 1;
     } else {
-        result.dead+=1;
+      result.dead += 1;
     }
-    
+
   }
   return result;
 }
 
 
-test('function should retrieve a number of alive writers and dead', function() {
+test('function should retrieve a number of alive writers and dead', function () {
   var persons = [
     {
       firstName: "Virginia",
@@ -48,8 +48,8 @@ test('function should retrieve a number of alive writers and dead', function() {
   var result = getStatistics(persons);
 
   expect(result).toEqual({
-alive: 2,
-dead: 2
-})
+    alive: 2,
+    dead: 2
+  })
 });
-test("string", function(){})
+test("string", function () { })

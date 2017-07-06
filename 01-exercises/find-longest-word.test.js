@@ -1,4 +1,4 @@
-function findLongestWord(words){
+function findLongestWord(words) {
     var lgth = 0;
     var longest;
 
@@ -11,10 +11,10 @@ function findLongestWord(words){
 
     return longest;
 }
-function findLongestStringWord(words){
-var str = words.split(' ');
-var longest=findLongestWord(str);
-return longest;
+function findLongestStringWord(words) {
+    var str = words.split(' ');
+    var longest = findLongestWord(str);
+    return longest;
 }
 
 test('find the longest word from the array ', function () {
@@ -23,8 +23,8 @@ test('find the longest word from the array ', function () {
     expect(longest).toBe('Future')
 })
 
-test('find the longest word from the string', function(){
-var school = 'Code Your Future';
-var longest=findLongestStringWord(school);
-expect(longest).toBe('Future')
+test('find the longest word from the string', function () {
+    var school = 'Code Your Future';
+    var longest = findLongestStringWord(school);
+    expect(longest).toBe('Future')
 })
