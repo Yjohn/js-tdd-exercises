@@ -1,7 +1,7 @@
 function convertToNewRoman(number) {
     // ToDo: do the proper implementation using TDD
-    var arabicNumbers = [1, 5, 10, 50, 100, 500, 100];
-    var oldRomanNumerals = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+    var arabicNumbers = [1, 2, 5, 10, 50, 100, 500, 100];
+    var oldRomanNumerals = ['I', 'II', 'V', 'X', 'L', 'C', 'D', 'M'];
     for (i = 0; i < arabicNumbers.length; i++) {
         if (arabicNumbers[i] === number) {
             return oldRomanNumerals[i];
@@ -28,4 +28,9 @@ test('convertToNewRoman should return X for 10', function () {
 test('convertToNewRoman should return L for 50', function () {
     var result = convertToNewRoman(50);
     expect(result).toBe('L');
+});
+
+test('convertToNewRoman should return II for 2', function () {
+    var result = convertToNewRoman(2);
+    expect(result).toBe('II');
 });
